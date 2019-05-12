@@ -7,14 +7,46 @@
 //
 
 import UIKit
+import UICircularProgressRing
+import SPStorkController
+
+
 
 class ViewController: UIViewController {
 
+    let button = UIButton.init(type: .system)
+    @IBOutlet weak var some: UICircularProgressRing!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        addRing()
+        let viewTapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        view.addGestureRecognizer(viewTapGesture)
+        
+    }
+    
+    @objc private func dismissKeyboard() {
+        view.endEditing(true)
+    }
+    
+    func addRing(){
+        some.value = 30
     }
 
-
+    @IBAction func showViewControllerTapped(_ sender: UIButton) {
+        guard let popupmain = storyboard?.instantiateViewController(withIdentifier: "main") as? PopUpViewController else { return }
+        popupmain.height = screenHeight / 1.75
+        popupmain.topCornerRadius = 20
+        popupmain.presentDuration = 1.4
+        popupmain.dismissDuration = 1.5
+        
+        present(popupmain, animated: true, completion: nil)
+    }
+    
+    public var screenHeight: CGFloat {
+        return UIScreen.main.bounds.height
+    }
+    
+    
 }
 

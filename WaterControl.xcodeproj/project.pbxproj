@@ -7,14 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B58B42CD5157F65BA614095 /* Pods_WaterControl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7830C7C8BFCA4D9D53F94566 /* Pods_WaterControl.framework */; };
+		E70262FC2286825700BE3D7E /* JBTabBarAnimation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E70262FB2286825700BE3D7E /* JBTabBarAnimation.framework */; };
+		E7184C8D2286CB8D0071B60F /* UICircularProgressRing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7184C8C2286CB8D0071B60F /* UICircularProgressRing.framework */; };
+		E7184C912286E3F20071B60F /* SPStorkController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7184C902286E3F20071B60F /* SPStorkController.framework */; };
+		E7184CA4228705950071B60F /* BottomPopup.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7184CA3228705950071B60F /* BottomPopup.framework */; };
 		E798927122854145009838E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E798927022854145009838E0 /* AppDelegate.swift */; };
 		E798927322854145009838E0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E798927222854145009838E0 /* ViewController.swift */; };
 		E798927622854145009838E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E798927422854145009838E0 /* Main.storyboard */; };
 		E79892782285414B009838E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E79892772285414B009838E0 /* Assets.xcassets */; };
 		E798927B2285414B009838E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E79892792285414B009838E0 /* LaunchScreen.storyboard */; };
+		E7C0FAC3228800C800D019F4 /* BottomPopupDismissAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C0FABB228800C800D019F4 /* BottomPopupDismissAnimator.swift */; };
+		E7C0FAC4228800C800D019F4 /* BottomPopupDismissInteractionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C0FABC228800C800D019F4 /* BottomPopupDismissInteractionController.swift */; };
+		E7C0FAC5228800C800D019F4 /* BottomPopupNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C0FABD228800C800D019F4 /* BottomPopupNavigationController.swift */; };
+		E7C0FAC6228800C800D019F4 /* BottomPopupPresentAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C0FABE228800C800D019F4 /* BottomPopupPresentAnimator.swift */; };
+		E7C0FAC7228800C800D019F4 /* BottomPopupPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C0FABF228800C800D019F4 /* BottomPopupPresentationController.swift */; };
+		E7C0FAC8228800C800D019F4 /* BottomPopupTransitionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C0FAC0228800C800D019F4 /* BottomPopupTransitionHandler.swift */; };
+		E7C0FAC9228800C800D019F4 /* BottomPopupUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C0FAC1228800C800D019F4 /* BottomPopupUtils.swift */; };
+		E7C0FACA228800C800D019F4 /* BottomPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C0FAC2228800C800D019F4 /* BottomPopupViewController.swift */; };
+		E7C0FAD02288243600D019F4 /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C0FACF2288243600D019F4 /* PopUpViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		471A25D752AE8CBEAA47B7B6 /* Pods-WaterControl.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaterControl.debug.xcconfig"; path = "Target Support Files/Pods-WaterControl/Pods-WaterControl.debug.xcconfig"; sourceTree = "<group>"; };
+		7830C7C8BFCA4D9D53F94566 /* Pods_WaterControl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WaterControl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B51D2F30F1C79F78143D1222 /* Pods-WaterControl.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaterControl.release.xcconfig"; path = "Target Support Files/Pods-WaterControl/Pods-WaterControl.release.xcconfig"; sourceTree = "<group>"; };
+		E70262FB2286825700BE3D7E /* JBTabBarAnimation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = JBTabBarAnimation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E70262FD2286825700BE3D7E /* TYProgressBar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TYProgressBar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7184C8C2286CB8D0071B60F /* UICircularProgressRing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UICircularProgressRing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7184C902286E3F20071B60F /* SPStorkController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SPStorkController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7184CA3228705950071B60F /* BottomPopup.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = BottomPopup.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E798926D22854145009838E0 /* WaterControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WaterControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E798927022854145009838E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E798927222854145009838E0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +44,15 @@
 		E79892772285414B009838E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E798927A2285414B009838E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E798927C2285414B009838E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E7C0FABB228800C800D019F4 /* BottomPopupDismissAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomPopupDismissAnimator.swift; sourceTree = "<group>"; };
+		E7C0FABC228800C800D019F4 /* BottomPopupDismissInteractionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomPopupDismissInteractionController.swift; sourceTree = "<group>"; };
+		E7C0FABD228800C800D019F4 /* BottomPopupNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomPopupNavigationController.swift; sourceTree = "<group>"; };
+		E7C0FABE228800C800D019F4 /* BottomPopupPresentAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomPopupPresentAnimator.swift; sourceTree = "<group>"; };
+		E7C0FABF228800C800D019F4 /* BottomPopupPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomPopupPresentationController.swift; sourceTree = "<group>"; };
+		E7C0FAC0228800C800D019F4 /* BottomPopupTransitionHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomPopupTransitionHandler.swift; sourceTree = "<group>"; };
+		E7C0FAC1228800C800D019F4 /* BottomPopupUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomPopupUtils.swift; sourceTree = "<group>"; };
+		E7C0FAC2228800C800D019F4 /* BottomPopupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomPopupViewController.swift; sourceTree = "<group>"; };
+		E7C0FACF2288243600D019F4 /* PopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +60,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7184CA4228705950071B60F /* BottomPopup.framework in Frameworks */,
+				E7184C912286E3F20071B60F /* SPStorkController.framework in Frameworks */,
+				E7184C8D2286CB8D0071B60F /* UICircularProgressRing.framework in Frameworks */,
+				E70262FC2286825700BE3D7E /* JBTabBarAnimation.framework in Frameworks */,
+				9B58B42CD5157F65BA614095 /* Pods_WaterControl.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		05322E34A7668DE773622BCD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E7184CA3228705950071B60F /* BottomPopup.framework */,
+				E7184C902286E3F20071B60F /* SPStorkController.framework */,
+				E7184C8C2286CB8D0071B60F /* UICircularProgressRing.framework */,
+				E70262FB2286825700BE3D7E /* JBTabBarAnimation.framework */,
+				E70262FD2286825700BE3D7E /* TYProgressBar.framework */,
+				7830C7C8BFCA4D9D53F94566 /* Pods_WaterControl.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E798926422854145009838E0 = {
 			isa = PBXGroup;
 			children = (
 				E798926F22854145009838E0 /* WaterControl */,
 				E798926E22854145009838E0 /* Products */,
+				EBFB02F2E7225143AF671493 /* Pods */,
+				05322E34A7668DE773622BCD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,13 +106,40 @@
 			isa = PBXGroup;
 			children = (
 				E798927022854145009838E0 /* AppDelegate.swift */,
+				E7C0FABA228800C800D019F4 /* BottomPopupController */,
 				E798927222854145009838E0 /* ViewController.swift */,
+				E7C0FACF2288243600D019F4 /* PopUpViewController.swift */,
 				E798927422854145009838E0 /* Main.storyboard */,
 				E79892772285414B009838E0 /* Assets.xcassets */,
 				E79892792285414B009838E0 /* LaunchScreen.storyboard */,
 				E798927C2285414B009838E0 /* Info.plist */,
 			);
 			path = WaterControl;
+			sourceTree = "<group>";
+		};
+		E7C0FABA228800C800D019F4 /* BottomPopupController */ = {
+			isa = PBXGroup;
+			children = (
+				E7C0FABB228800C800D019F4 /* BottomPopupDismissAnimator.swift */,
+				E7C0FABC228800C800D019F4 /* BottomPopupDismissInteractionController.swift */,
+				E7C0FABD228800C800D019F4 /* BottomPopupNavigationController.swift */,
+				E7C0FABE228800C800D019F4 /* BottomPopupPresentAnimator.swift */,
+				E7C0FABF228800C800D019F4 /* BottomPopupPresentationController.swift */,
+				E7C0FAC0228800C800D019F4 /* BottomPopupTransitionHandler.swift */,
+				E7C0FAC1228800C800D019F4 /* BottomPopupUtils.swift */,
+				E7C0FAC2228800C800D019F4 /* BottomPopupViewController.swift */,
+			);
+			name = BottomPopupController;
+			path = "../../../Desktop/BottomPopup-master 2/BottomPopup/BottomPopupController";
+			sourceTree = "<group>";
+		};
+		EBFB02F2E7225143AF671493 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				471A25D752AE8CBEAA47B7B6 /* Pods-WaterControl.debug.xcconfig */,
+				B51D2F30F1C79F78143D1222 /* Pods-WaterControl.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +149,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E798927F2285414B009838E0 /* Build configuration list for PBXNativeTarget "WaterControl" */;
 			buildPhases = (
+				6D5F369C2AC3AA52D25D3EC4 /* [CP] Check Pods Manifest.lock */,
 				E798926922854145009838E0 /* Sources */,
 				E798926A22854145009838E0 /* Frameworks */,
 				E798926B22854145009838E0 /* Resources */,
+				7FC71E02A4581F5410618181 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -130,13 +210,79 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6D5F369C2AC3AA52D25D3EC4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WaterControl-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7FC71E02A4581F5410618181 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WaterControl/Pods-WaterControl-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BottomPopup/BottomPopup.framework",
+				"${BUILT_PRODUCTS_DIR}/JBTabBarAnimation/JBTabBarAnimation.framework",
+				"${BUILT_PRODUCTS_DIR}/SPStorkController/SPStorkController.framework",
+				"${BUILT_PRODUCTS_DIR}/SSCustomTabbar/SSCustomTabbar.framework",
+				"${BUILT_PRODUCTS_DIR}/TYProgressBar/TYProgressBar.framework",
+				"${BUILT_PRODUCTS_DIR}/UICircularProgressRing/UICircularProgressRing.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BottomPopup.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JBTabBarAnimation.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SPStorkController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SSCustomTabbar.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TYProgressBar.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UICircularProgressRing.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WaterControl/Pods-WaterControl-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E798926922854145009838E0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				E798927322854145009838E0 /* ViewController.swift in Sources */,
+				E7C0FAC7228800C800D019F4 /* BottomPopupPresentationController.swift in Sources */,
+				E7C0FAC8228800C800D019F4 /* BottomPopupTransitionHandler.swift in Sources */,
+				E7C0FAC3228800C800D019F4 /* BottomPopupDismissAnimator.swift in Sources */,
+				E7C0FAC9228800C800D019F4 /* BottomPopupUtils.swift in Sources */,
+				E7C0FAC5228800C800D019F4 /* BottomPopupNavigationController.swift in Sources */,
+				E7C0FACA228800C800D019F4 /* BottomPopupViewController.swift in Sources */,
+				E7C0FAD02288243600D019F4 /* PopUpViewController.swift in Sources */,
 				E798927122854145009838E0 /* AppDelegate.swift in Sources */,
+				E7C0FAC6228800C800D019F4 /* BottomPopupPresentAnimator.swift in Sources */,
+				E7C0FAC4228800C800D019F4 /* BottomPopupDismissInteractionController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,11 +426,13 @@
 		};
 		E79892802285414B009838E0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 471A25D752AE8CBEAA47B7B6 /* Pods-WaterControl.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8XC3TP2JFB;
 				INFOPLIST_FILE = WaterControl/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -298,11 +446,13 @@
 		};
 		E79892812285414B009838E0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B51D2F30F1C79F78143D1222 /* Pods-WaterControl.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8XC3TP2JFB;
 				INFOPLIST_FILE = WaterControl/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

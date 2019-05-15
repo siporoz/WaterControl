@@ -12,20 +12,21 @@
 		E7184C8D2286CB8D0071B60F /* UICircularProgressRing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7184C8C2286CB8D0071B60F /* UICircularProgressRing.framework */; };
 		E7184C912286E3F20071B60F /* SPStorkController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7184C902286E3F20071B60F /* SPStorkController.framework */; };
 		E7184CA4228705950071B60F /* BottomPopup.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7184CA3228705950071B60F /* BottomPopup.framework */; };
+		E76BDE42228BCE87003C482E /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76BDE41228BCE87003C482E /* Data.swift */; };
 		E798927122854145009838E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E798927022854145009838E0 /* AppDelegate.swift */; };
 		E798927322854145009838E0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E798927222854145009838E0 /* ViewController.swift */; };
 		E798927622854145009838E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E798927422854145009838E0 /* Main.storyboard */; };
 		E79892782285414B009838E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E79892772285414B009838E0 /* Assets.xcassets */; };
 		E798927B2285414B009838E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E79892792285414B009838E0 /* LaunchScreen.storyboard */; };
-		E7C0FAC3228800C800D019F4 /* BottomPopupDismissAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C0FABB228800C800D019F4 /* BottomPopupDismissAnimator.swift */; };
-		E7C0FAC4228800C800D019F4 /* BottomPopupDismissInteractionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C0FABC228800C800D019F4 /* BottomPopupDismissInteractionController.swift */; };
-		E7C0FAC5228800C800D019F4 /* BottomPopupNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C0FABD228800C800D019F4 /* BottomPopupNavigationController.swift */; };
-		E7C0FAC6228800C800D019F4 /* BottomPopupPresentAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C0FABE228800C800D019F4 /* BottomPopupPresentAnimator.swift */; };
-		E7C0FAC7228800C800D019F4 /* BottomPopupPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C0FABF228800C800D019F4 /* BottomPopupPresentationController.swift */; };
-		E7C0FAC8228800C800D019F4 /* BottomPopupTransitionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C0FAC0228800C800D019F4 /* BottomPopupTransitionHandler.swift */; };
-		E7C0FAC9228800C800D019F4 /* BottomPopupUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C0FAC1228800C800D019F4 /* BottomPopupUtils.swift */; };
-		E7C0FACA228800C800D019F4 /* BottomPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C0FAC2228800C800D019F4 /* BottomPopupViewController.swift */; };
 		E7C0FAD02288243600D019F4 /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C0FACF2288243600D019F4 /* PopUpViewController.swift */; };
+		E7C0FADA228842EC00D019F4 /* BottomPopupDismissAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C0FAD2228842EC00D019F4 /* BottomPopupDismissAnimator.swift */; };
+		E7C0FADB228842EC00D019F4 /* BottomPopupDismissInteractionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C0FAD3228842EC00D019F4 /* BottomPopupDismissInteractionController.swift */; };
+		E7C0FADC228842EC00D019F4 /* BottomPopupNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C0FAD4228842EC00D019F4 /* BottomPopupNavigationController.swift */; };
+		E7C0FADD228842EC00D019F4 /* BottomPopupPresentAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C0FAD5228842EC00D019F4 /* BottomPopupPresentAnimator.swift */; };
+		E7C0FADE228842EC00D019F4 /* BottomPopupPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C0FAD6228842EC00D019F4 /* BottomPopupPresentationController.swift */; };
+		E7C0FADF228842EC00D019F4 /* BottomPopupTransitionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C0FAD7228842EC00D019F4 /* BottomPopupTransitionHandler.swift */; };
+		E7C0FAE0228842EC00D019F4 /* BottomPopupUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C0FAD8228842EC00D019F4 /* BottomPopupUtils.swift */; };
+		E7C0FAE1228842EC00D019F4 /* BottomPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C0FAD9228842EC00D019F4 /* BottomPopupViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		E7184C8C2286CB8D0071B60F /* UICircularProgressRing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UICircularProgressRing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7184C902286E3F20071B60F /* SPStorkController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SPStorkController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7184CA3228705950071B60F /* BottomPopup.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = BottomPopup.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E76BDE41228BCE87003C482E /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		E798926D22854145009838E0 /* WaterControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WaterControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E798927022854145009838E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E798927222854145009838E0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -44,15 +46,15 @@
 		E79892772285414B009838E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E798927A2285414B009838E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E798927C2285414B009838E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E7C0FABB228800C800D019F4 /* BottomPopupDismissAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomPopupDismissAnimator.swift; sourceTree = "<group>"; };
-		E7C0FABC228800C800D019F4 /* BottomPopupDismissInteractionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomPopupDismissInteractionController.swift; sourceTree = "<group>"; };
-		E7C0FABD228800C800D019F4 /* BottomPopupNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomPopupNavigationController.swift; sourceTree = "<group>"; };
-		E7C0FABE228800C800D019F4 /* BottomPopupPresentAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomPopupPresentAnimator.swift; sourceTree = "<group>"; };
-		E7C0FABF228800C800D019F4 /* BottomPopupPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomPopupPresentationController.swift; sourceTree = "<group>"; };
-		E7C0FAC0228800C800D019F4 /* BottomPopupTransitionHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomPopupTransitionHandler.swift; sourceTree = "<group>"; };
-		E7C0FAC1228800C800D019F4 /* BottomPopupUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomPopupUtils.swift; sourceTree = "<group>"; };
-		E7C0FAC2228800C800D019F4 /* BottomPopupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomPopupViewController.swift; sourceTree = "<group>"; };
 		E7C0FACF2288243600D019F4 /* PopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
+		E7C0FAD2228842EC00D019F4 /* BottomPopupDismissAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomPopupDismissAnimator.swift; sourceTree = "<group>"; };
+		E7C0FAD3228842EC00D019F4 /* BottomPopupDismissInteractionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomPopupDismissInteractionController.swift; sourceTree = "<group>"; };
+		E7C0FAD4228842EC00D019F4 /* BottomPopupNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomPopupNavigationController.swift; sourceTree = "<group>"; };
+		E7C0FAD5228842EC00D019F4 /* BottomPopupPresentAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomPopupPresentAnimator.swift; sourceTree = "<group>"; };
+		E7C0FAD6228842EC00D019F4 /* BottomPopupPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomPopupPresentationController.swift; sourceTree = "<group>"; };
+		E7C0FAD7228842EC00D019F4 /* BottomPopupTransitionHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomPopupTransitionHandler.swift; sourceTree = "<group>"; };
+		E7C0FAD8228842EC00D019F4 /* BottomPopupUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomPopupUtils.swift; sourceTree = "<group>"; };
+		E7C0FAD9228842EC00D019F4 /* BottomPopupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomPopupViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,9 +108,10 @@
 			isa = PBXGroup;
 			children = (
 				E798927022854145009838E0 /* AppDelegate.swift */,
-				E7C0FABA228800C800D019F4 /* BottomPopupController */,
+				E7C0FAD1228842EC00D019F4 /* BottomPopupController */,
 				E798927222854145009838E0 /* ViewController.swift */,
 				E7C0FACF2288243600D019F4 /* PopUpViewController.swift */,
+				E76BDE41228BCE87003C482E /* Data.swift */,
 				E798927422854145009838E0 /* Main.storyboard */,
 				E79892772285414B009838E0 /* Assets.xcassets */,
 				E79892792285414B009838E0 /* LaunchScreen.storyboard */,
@@ -117,20 +120,20 @@
 			path = WaterControl;
 			sourceTree = "<group>";
 		};
-		E7C0FABA228800C800D019F4 /* BottomPopupController */ = {
+		E7C0FAD1228842EC00D019F4 /* BottomPopupController */ = {
 			isa = PBXGroup;
 			children = (
-				E7C0FABB228800C800D019F4 /* BottomPopupDismissAnimator.swift */,
-				E7C0FABC228800C800D019F4 /* BottomPopupDismissInteractionController.swift */,
-				E7C0FABD228800C800D019F4 /* BottomPopupNavigationController.swift */,
-				E7C0FABE228800C800D019F4 /* BottomPopupPresentAnimator.swift */,
-				E7C0FABF228800C800D019F4 /* BottomPopupPresentationController.swift */,
-				E7C0FAC0228800C800D019F4 /* BottomPopupTransitionHandler.swift */,
-				E7C0FAC1228800C800D019F4 /* BottomPopupUtils.swift */,
-				E7C0FAC2228800C800D019F4 /* BottomPopupViewController.swift */,
+				E7C0FAD2228842EC00D019F4 /* BottomPopupDismissAnimator.swift */,
+				E7C0FAD3228842EC00D019F4 /* BottomPopupDismissInteractionController.swift */,
+				E7C0FAD4228842EC00D019F4 /* BottomPopupNavigationController.swift */,
+				E7C0FAD5228842EC00D019F4 /* BottomPopupPresentAnimator.swift */,
+				E7C0FAD6228842EC00D019F4 /* BottomPopupPresentationController.swift */,
+				E7C0FAD7228842EC00D019F4 /* BottomPopupTransitionHandler.swift */,
+				E7C0FAD8228842EC00D019F4 /* BottomPopupUtils.swift */,
+				E7C0FAD9228842EC00D019F4 /* BottomPopupViewController.swift */,
 			);
 			name = BottomPopupController;
-			path = "../../../Desktop/BottomPopup-master 2/BottomPopup/BottomPopupController";
+			path = ../../../Desktop/WaterControl/WaterControl/BottomPopupController;
 			sourceTree = "<group>";
 		};
 		EBFB02F2E7225143AF671493 /* Pods */ = {
@@ -273,16 +276,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				E798927322854145009838E0 /* ViewController.swift in Sources */,
-				E7C0FAC7228800C800D019F4 /* BottomPopupPresentationController.swift in Sources */,
-				E7C0FAC8228800C800D019F4 /* BottomPopupTransitionHandler.swift in Sources */,
-				E7C0FAC3228800C800D019F4 /* BottomPopupDismissAnimator.swift in Sources */,
-				E7C0FAC9228800C800D019F4 /* BottomPopupUtils.swift in Sources */,
-				E7C0FAC5228800C800D019F4 /* BottomPopupNavigationController.swift in Sources */,
-				E7C0FACA228800C800D019F4 /* BottomPopupViewController.swift in Sources */,
+				E7C0FAE0228842EC00D019F4 /* BottomPopupUtils.swift in Sources */,
+				E7C0FADD228842EC00D019F4 /* BottomPopupPresentAnimator.swift in Sources */,
 				E7C0FAD02288243600D019F4 /* PopUpViewController.swift in Sources */,
 				E798927122854145009838E0 /* AppDelegate.swift in Sources */,
-				E7C0FAC6228800C800D019F4 /* BottomPopupPresentAnimator.swift in Sources */,
-				E7C0FAC4228800C800D019F4 /* BottomPopupDismissInteractionController.swift in Sources */,
+				E7C0FADB228842EC00D019F4 /* BottomPopupDismissInteractionController.swift in Sources */,
+				E7C0FADE228842EC00D019F4 /* BottomPopupPresentationController.swift in Sources */,
+				E76BDE42228BCE87003C482E /* Data.swift in Sources */,
+				E7C0FADF228842EC00D019F4 /* BottomPopupTransitionHandler.swift in Sources */,
+				E7C0FADA228842EC00D019F4 /* BottomPopupDismissAnimator.swift in Sources */,
+				E7C0FADC228842EC00D019F4 /* BottomPopupNavigationController.swift in Sources */,
+				E7C0FAE1228842EC00D019F4 /* BottomPopupViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

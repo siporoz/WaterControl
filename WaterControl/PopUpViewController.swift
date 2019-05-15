@@ -10,7 +10,8 @@ import UIKit
 
 class PopUpViewController: BottomPopupViewController,  UIPickerViewDelegate, UIPickerViewDataSource {
     
-    @IBOutlet weak var WaterVolume: UILabel!
+    @IBOutlet weak var test: UILabel!
+    
     @IBOutlet weak var input: UITextField!
     
     var height: CGFloat?
@@ -23,6 +24,8 @@ class PopUpViewController: BottomPopupViewController,  UIPickerViewDelegate, UIP
         dismiss(animated: true, completion: nil)
         
     }
+    
+    let progress: String = ""
     
     let pickerViewValues = ["100", "200", "300", "400", "500", "600", "700", "800", "900", "1000"]
 
@@ -44,8 +47,38 @@ class PopUpViewController: BottomPopupViewController,  UIPickerViewDelegate, UIP
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         input.text = pickerViewValues[row]
     }
-
     
+    var mainNumber = 0
+    
+    
+    @IBAction func addButton(_ sender: UIButton) {
+        loadData()
+        let myVC = storyboard?.instantiateViewController(withIdentifier: "mainView") as! ViewController
+        let singleton = Singletonn.shared
+        let sdvj = singleton.number + 32
+        singleton.number = sdvj
+        mainNumber = sdvj
+        singleton.number = mainNumber
+        print(sdvj)
+        myVC.upDatet()
+        saveData()
+       // dismiss(animated: true, completion: nil)
+        
+    }
+    
+    
+    func saveData(){
+        
+        UserDefaults.standard.set(mainNumber, forKey: "Progress")
+        UserDefaults.standard.synchronize()
+    
+       
+    }
+    
+    func loadData(){
+        UserDefaults.standard.integer(forKey: "Progress")
+        mainNumber = UserDefaults.standard.integer(forKey: "Progress")
+    }
     
     
     
@@ -71,3 +104,4 @@ class PopUpViewController: BottomPopupViewController,  UIPickerViewDelegate, UIP
     }
 
 }
+

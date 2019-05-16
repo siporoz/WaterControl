@@ -1,14 +1,14 @@
 //
-//  PopUpViewController.swift
+//  FastSettingsViewController.swift
 //  WaterControl
 //
-//  Created by Владимир on 12.05.2019.
+//  Created by Владимир on 15.05.2019.
 //  Copyright © 2019 Siporoz. All rights reserved.
 //
 
 import UIKit
 
-class PopUpViewController: BottomPopupViewController,  UIPickerViewDelegate, UIPickerViewDataSource {
+class FastSettingsViewController: BottomPopupViewController,UIPickerViewDelegate, UIPickerViewDataSource {
     
     @IBOutlet weak var test: UILabel!
     
@@ -27,8 +27,8 @@ class PopUpViewController: BottomPopupViewController,  UIPickerViewDelegate, UIP
     
     let progress: String = ""
     
-    let pickerViewValues = ["100", "200", "300", "400", "500", "600", "700", "800", "900", "1000"]
-
+    let pickerViewValues = ["1000", "1100", "1200", "1300", "1400", "1500", "1600", "1700", "1800", "1900", "2000", "2100", "2200", "2300", "2400", "2500", "2600", "2700", "2800", "2900", "3000"]
+    
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -55,30 +55,29 @@ class PopUpViewController: BottomPopupViewController,  UIPickerViewDelegate, UIP
         loadData()
         let myVC = storyboard?.instantiateViewController(withIdentifier: "mainView") as! ViewController
         let singleton = Singletonn.shared
-        let addCount = Int(input.text!)
-        let sdvj = singleton.number + addCount!
-        singleton.number = sdvj
-        mainNumber = sdvj
-        singleton.number = mainNumber
+        let sdvj = Int(input.text!)
+        singleton.weight = sdvj!
+        mainNumber = sdvj!
+        singleton.weight = mainNumber
         print(sdvj)
         //myVC.upDate()
         saveData()
-       // dismiss(animated: true, completion: nil) КАК РЕАЛИЗОВТАЬ НОРМАЛЬНОЕ ЗАКРЫТИЕ?
+        // dismiss(animated: true, completion: nil) КАК РЕАЛИЗОВТАЬ НОРМАЛЬНОЕ ЗАКРЫТИЕ?
         
     }
     
     
     func saveData(){
         
-        UserDefaults.standard.set(mainNumber, forKey: "Progress")
+        UserDefaults.standard.set(mainNumber, forKey: "weight")
         UserDefaults.standard.synchronize()
-    
-       
+        
+        
     }
     
     func loadData(){
-        UserDefaults.standard.integer(forKey: "Progress")
-        mainNumber = UserDefaults.standard.integer(forKey: "Progress")
+        UserDefaults.standard.integer(forKey: "weight")
+        mainNumber = UserDefaults.standard.integer(forKey: "weight")
     }
     
     
@@ -105,4 +104,3 @@ class PopUpViewController: BottomPopupViewController,  UIPickerViewDelegate, UIP
     }
 
 }
-

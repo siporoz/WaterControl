@@ -11,18 +11,8 @@ import Foundation
 class Singletonn {
     
     static let shared = Singletonn()
-    var number = UserDefaults.standard.integer(forKey: "Progress")
+    var number = UserDefaults.standard.integer(forKey: "Progress") 
     
-    func saveData(){
-        
-        UserDefaults.standard.set(number, forKey: "Progress")
-        UserDefaults.standard.synchronize()
-        
-        
-    }
-    
-    func loadData(){
-        UserDefaults.standard.integer(forKey: "Progress")
-        number = UserDefaults.standard.integer(forKey: "Progress")
-    }
+    var weight = UserDefaults.standard.integer(forKey: "weight")
+
 }

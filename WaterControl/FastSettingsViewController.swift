@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import RealmSwift
 
 class FastSettingsViewController: BottomPopupViewController,UIPickerViewDelegate, UIPickerViewDataSource {
+    
+    let realm = try! Realm()
     
     @IBOutlet weak var test: UILabel!
     
@@ -52,7 +55,7 @@ class FastSettingsViewController: BottomPopupViewController,UIPickerViewDelegate
     
     
     @IBAction func addButton(_ sender: UIButton) {
-        loadData()
+
         let myVC = storyboard?.instantiateViewController(withIdentifier: "mainView") as! ViewController
         let singleton = Singletonn.shared
         let sdvj = Int(input.text!)
@@ -62,8 +65,18 @@ class FastSettingsViewController: BottomPopupViewController,UIPickerViewDelegate
         print(sdvj)
         //myVC.upDate()
         saveData()
+
+        
         // dismiss(animated: true, completion: nil) КАК РЕАЛИЗОВТАЬ НОРМАЛЬНОЕ ЗАКРЫТИЕ?
         
+    }
+    
+    func getDate() -> String{
+        let date = Date()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd.MM.yyyy"
+        let result = formatter.string(from: date)
+        return result
     }
     
     

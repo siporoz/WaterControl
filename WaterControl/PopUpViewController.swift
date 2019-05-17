@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import RealmSwift
 
 class PopUpViewController: BottomPopupViewController,  UIPickerViewDelegate, UIPickerViewDataSource {
+    
+    let realm = try! Realm()
     
     @IBOutlet weak var test: UILabel!
     
@@ -32,6 +35,7 @@ class PopUpViewController: BottomPopupViewController,  UIPickerViewDelegate, UIP
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
+        
     }
     
     func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
@@ -50,8 +54,12 @@ class PopUpViewController: BottomPopupViewController,  UIPickerViewDelegate, UIP
     
     var mainNumber = 0
     
+    var mainDate: String = ""
     
     @IBAction func addButton(_ sender: UIButton) {
+        // Получение даты
+        mainDate = getDate()
+        print(mainDate)
         loadData()
         let myVC = storyboard?.instantiateViewController(withIdentifier: "mainView") as! ViewController
         let singleton = Singletonn.shared
@@ -61,16 +69,37 @@ class PopUpViewController: BottomPopupViewController,  UIPickerViewDelegate, UIP
         mainNumber = sdvj
         singleton.number = mainNumber
         print(sdvj)
-        //myVC.upDate()
+
+        
+        
         saveData()
+        
+        //REALM
+        
+        var someData = newData()
+        someData.date = mainDate
+        someData.countWater = input.text!
+        
+        try! realm.write {
+            realm.add(someData)
+        }
+        
        // dismiss(animated: true, completion: nil) КАК РЕАЛИЗОВТАЬ НОРМАЛЬНОЕ ЗАКРЫТИЕ?
         
     }
     
+    func getDate() -> String{
+        let date = Date()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd.MM.yyyy"
+        let result = formatter.string(from: date)
+        return result
+    }
     
     func saveData(){
         
         UserDefaults.standard.set(mainNumber, forKey: "Progress")
+        UserDefaults.standard.set(mainDate, forKey: "Date")
         UserDefaults.standard.synchronize()
     
        

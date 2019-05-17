@@ -9,39 +9,59 @@
 import UIKit
 import UICircularProgressRing
 import SPStorkController
+import RealmSwift
 
 
-
-class ViewController: UIViewController {
+class ViewController: UIViewController{
+    
+    let realm = try! Realm()
 
     @IBOutlet weak var progressWater: UILabel!
     @IBOutlet weak var weight: UILabel!
     
+    func applicationWillResignActive(_ application: UIApplication){
+        print("Пздц")
+    }
     
-    var myValue:String = "НИуя"
+    var myValue:String = ""
 
     
     var count = 3
-    
+    var mainDate: String = ""
     
     let button = UIButton.init(type: .system)
     @IBOutlet weak var some: UICircularProgressRing!
     
+    
+    
     override func viewDidLoad() {
-        super.viewDidLoad()
+       super.viewDidLoad()
+        
+        // Кол-во воды
+        weight.text = loadData()
+        
+        let realm = try! Realm()
+        
+        
+        // applicationDidBecomeActive
+        NotificationCenter.default.addObserver(self, selector: #selector(applicationDidBecomeActive), name: UIApplication.didBecomeActiveNotification, object: nil)
+        // Ring
         addRing()
         let viewTapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         view.addGestureRecognizer(viewTapGesture)
-        let singleton = Singletonn.shared
-        //singleton.number = 3
-        if(singleton.number == 0){
-            singleton.number = 1
+       
+        // Get date
+        mainDate = getDate()
+        var countArr = 0
+        let result = realm.objects(newData.self).filter("date = '\(mainDate)'")
+        print(result.count)
+        if(result.count != 0){
+        for i in 0...result.count - 1{
+            print(result[i].countWater)
+            countArr = countArr + Int(result[i].countWater!)!
         }
-        if(singleton.weight == 0){
-            singleton.weight = 1
         }
-        progressWater.text = String(singleton.number)
-        weight.text = String(singleton.weight)
+        progressWater.text = String(countArr)
         upDate()
     }
     
@@ -55,7 +75,6 @@ class ViewController: UIViewController {
         some.value = CGFloat(final)
 
     }
-    
     
     @objc private func dismissKeyboard() {
         view.endEditing(true)
@@ -93,6 +112,33 @@ class ViewController: UIViewController {
         return UIScreen.main.bounds.height
     }
     
+    func getDate() -> String{
+        let date = Date()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd.MM.yyyy"
+        let result = formatter.string(from: date)
+        return result
+    }
+    
+    
+    // applicationDidBecomeActive
+    @objc func applicationDidBecomeActive(notification: NSNotification) {
+        // Application is back in the foreground
+        let mainDate = getDate()
+        let loadDate = loadData()
+        print(mainDate," СЕГОДНЯШНЯЯ ДАТА ")
+        print(loadDate!," ПОДГРУЖЕННАЯ ДАТА ")
+        
+        if(mainDate != loadDate!){
+            self.viewDidLoad()
+        }
+    }
+    
+    
+    func loadData() -> String?{
+        let mainNumber = UserDefaults.standard.string(forKey: "weight")
+        return mainNumber
+    }
     
 }
 

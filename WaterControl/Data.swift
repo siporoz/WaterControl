@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import RealmSwift
 
 class Singletonn {
     
@@ -14,5 +15,15 @@ class Singletonn {
     var number = UserDefaults.standard.integer(forKey: "Progress") 
     
     var weight = UserDefaults.standard.integer(forKey: "weight")
-
+    
+    
+    var fjdsijf = UserDefaults.standard.integer(forKey: "weigfdsfht")
+    
+    // тестируем со временем
+    
+ //   var numberTime:[String: String] = UserDefaults.standard.dictionary(forKey: "numberTime") as! [String : String]
+    
+    var mainDate = UserDefaults.standard.string(forKey: "Date")
+    
+    var arrDate = UserDefaults.standard.array(forKey: "arrData")
 }

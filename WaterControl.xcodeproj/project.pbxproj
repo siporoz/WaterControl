@@ -20,6 +20,10 @@
 		E798927622854145009838E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E798927422854145009838E0 /* Main.storyboard */; };
 		E79892782285414B009838E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E79892772285414B009838E0 /* Assets.xcassets */; };
 		E798927B2285414B009838E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E79892792285414B009838E0 /* LaunchScreen.storyboard */; };
+		E7BE2B9E228DB77900E57E64 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7BE2B9D228DB77900E57E64 /* Realm.framework */; };
+		E7BE2F3C228DCC7000E57E64 /* DateDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BE2F3B228DCC7000E57E64 /* DateDB.swift */; };
+		E7BE2F40228E89C500E57E64 /* StatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BE2F3F228E89C500E57E64 /* StatisticsViewController.swift */; };
+		E7BE2F42228E8A1F00E57E64 /* ChartProgressBar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7BE2F41228E8A1F00E57E64 /* ChartProgressBar.framework */; };
 		E7C0FAD02288243600D019F4 /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C0FACF2288243600D019F4 /* PopUpViewController.swift */; };
 		E7C0FADA228842EC00D019F4 /* BottomPopupDismissAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C0FAD2228842EC00D019F4 /* BottomPopupDismissAnimator.swift */; };
 		E7C0FADB228842EC00D019F4 /* BottomPopupDismissInteractionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C0FAD3228842EC00D019F4 /* BottomPopupDismissInteractionController.swift */; };
@@ -50,6 +54,12 @@
 		E79892772285414B009838E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E798927A2285414B009838E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E798927C2285414B009838E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E7BE2B99228DB5A500E57E64 /* Realm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Realm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7BE2B9D228DB77900E57E64 /* Realm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Realm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7BE2F3B228DCC7000E57E64 /* DateDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateDB.swift; sourceTree = "<group>"; };
+		E7BE2F3D228E88F800E57E64 /* ChartProgressBar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ChartProgressBar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7BE2F3F228E89C500E57E64 /* StatisticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsViewController.swift; sourceTree = "<group>"; };
+		E7BE2F41228E8A1F00E57E64 /* ChartProgressBar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ChartProgressBar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7C0FACF2288243600D019F4 /* PopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
 		E7C0FAD2228842EC00D019F4 /* BottomPopupDismissAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomPopupDismissAnimator.swift; sourceTree = "<group>"; };
 		E7C0FAD3228842EC00D019F4 /* BottomPopupDismissInteractionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomPopupDismissInteractionController.swift; sourceTree = "<group>"; };
@@ -66,6 +76,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7BE2F42228E8A1F00E57E64 /* ChartProgressBar.framework in Frameworks */,
+				E7BE2B9E228DB77900E57E64 /* Realm.framework in Frameworks */,
 				E7184CA4228705950071B60F /* BottomPopup.framework in Frameworks */,
 				E7184C912286E3F20071B60F /* SPStorkController.framework in Frameworks */,
 				E7184C8D2286CB8D0071B60F /* UICircularProgressRing.framework in Frameworks */,
@@ -80,6 +92,10 @@
 		05322E34A7668DE773622BCD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E7BE2F41228E8A1F00E57E64 /* ChartProgressBar.framework */,
+				E7BE2F3D228E88F800E57E64 /* ChartProgressBar.framework */,
+				E7BE2B9D228DB77900E57E64 /* Realm.framework */,
+				E7BE2B99228DB5A500E57E64 /* Realm.framework */,
 				E7184CA3228705950071B60F /* BottomPopup.framework */,
 				E7184C902286E3F20071B60F /* SPStorkController.framework */,
 				E7184C8C2286CB8D0071B60F /* UICircularProgressRing.framework */,
@@ -111,13 +127,15 @@
 		E798926F22854145009838E0 /* WaterControl */ = {
 			isa = PBXGroup;
 			children = (
-				E798927022854145009838E0 /* AppDelegate.swift */,
 				E7C0FAD1228842EC00D019F4 /* BottomPopupController */,
+				E798927022854145009838E0 /* AppDelegate.swift */,
 				E798927222854145009838E0 /* ViewController.swift */,
 				E7C0FACF2288243600D019F4 /* PopUpViewController.swift */,
 				E76BDE49228C5F0B003C482E /* FastSettingsViewController.swift */,
 				E76BDE47228C5C0E003C482E /* SettingsViewController.swift */,
 				E76BDE41228BCE87003C482E /* Data.swift */,
+				E7BE2F3B228DCC7000E57E64 /* DateDB.swift */,
+				E7BE2F3F228E89C500E57E64 /* StatisticsViewController.swift */,
 				E798927422854145009838E0 /* Main.storyboard */,
 				E79892772285414B009838E0 /* Assets.xcassets */,
 				E79892792285414B009838E0 /* LaunchScreen.storyboard */,
@@ -252,7 +270,10 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-WaterControl/Pods-WaterControl-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/BottomPopup/BottomPopup.framework",
+				"${BUILT_PRODUCTS_DIR}/ChartProgressBar/ChartProgressBar.framework",
 				"${BUILT_PRODUCTS_DIR}/JBTabBarAnimation/JBTabBarAnimation.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SPStorkController/SPStorkController.framework",
 				"${BUILT_PRODUCTS_DIR}/SSCustomTabbar/SSCustomTabbar.framework",
 				"${BUILT_PRODUCTS_DIR}/TYProgressBar/TYProgressBar.framework",
@@ -263,7 +284,10 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BottomPopup.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChartProgressBar.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JBTabBarAnimation.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SPStorkController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SSCustomTabbar.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TYProgressBar.framework",
@@ -282,7 +306,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E76BDE4A228C5F0B003C482E /* FastSettingsViewController.swift in Sources */,
+				E7BE2F3C228DCC7000E57E64 /* DateDB.swift in Sources */,
 				E798927322854145009838E0 /* ViewController.swift in Sources */,
+				E7BE2F40228E89C500E57E64 /* StatisticsViewController.swift in Sources */,
 				E7C0FAE0228842EC00D019F4 /* BottomPopupUtils.swift in Sources */,
 				E7C0FADD228842EC00D019F4 /* BottomPopupPresentAnimator.swift in Sources */,
 				E7C0FAD02288243600D019F4 /* PopUpViewController.swift in Sources */,

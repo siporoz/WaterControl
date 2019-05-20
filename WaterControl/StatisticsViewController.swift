@@ -10,21 +10,51 @@ import UIKit
 import ChartProgressBar
 import RealmSwift
 
-class StatisticsViewController: UIViewController, ChartProgressBarDelegate {
+class StatisticsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource ,ChartProgressBarDelegate {
+
+    
     @IBOutlet weak var chart: ChartProgressBar!
+    
+    // Data model: These strings will be the data for the table view cells
+    let animals: [String] = ["Horse", "Cow", "Camel", "Sheep", "Goat"]
+    
+    // cell reuse id (cells that scroll out of view can be reused)
+    let cellReuseIdentifier = "cell"
+    
+    @IBOutlet var tableView: UITableView!
     
     
     let realm = try! Realm()
     var mainDate: String = ""
     
+    // массив с кол-вом воды
+    var arrCountWater : [String] = []
+    // массив с литрами
+    var arrLiterWater : [String] = []
+    // Массив с датами
+    var arrDate : [String] = []
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellReuseIdentifier)
+        
+        // (optional) include this line if you want to remove the extra empty cell divider lines
+        // self.tableView.tableFooterView = UIView()
+        
+        // This view controller itself will provide the delegate methods and row data for the table view.
+        tableView.delegate = self
+        tableView.dataSource = self
+        
+        self.tableView.backgroundColor = UIColor.blue
+        
         mainDate = getDate()
         var countArr = 0
         let result = realm.objects(newData.self).filter("date = '\(mainDate)'")
         print(result.count)
         if(result.count != 0){
-            for i in 0...result.count - 1{
+            for i in 0...result.count - 1 {               
                 print(result[i].countWater)
                 countArr = countArr + Int(result[i].countWater!)!
             }
@@ -35,10 +65,10 @@ class StatisticsViewController: UIViewController, ChartProgressBarDelegate {
         let calendar = Calendar.current
         let formatter = DateFormatter()
         
-        // Массив с датами
-        var arrDate : [String] = []
+//        // Массив с датами
+//        var arrDate : [String] = []
         
-        for itemDate in 1...7{
+        for itemDate in 0...7{
             let someDete = calendar.date(byAdding: .day, value: -itemDate, to: Date())
             formatter.dateFormat = "dd.MM.yyyy"
             let result1 = formatter.string(from: someDete!)
@@ -46,57 +76,79 @@ class StatisticsViewController: UIViewController, ChartProgressBarDelegate {
             print(result1)
         }
         
+//        // массив с кол-вом воды
+//        var arrCountWater : [String] = []
+//        // массив с литрами
+//        var arrLiterWater : [String] = []
         
-        var arrCountWater : [String] = []
-        
-        for itemCountWater in 1...6{
+        for itemCountWater in 0...7{
+            
+            var result = realm.objects(newData.self).filter("date = '\(arrDate[itemCountWater])'")
             var countWater = 0.0
-            let result = realm.objects(newData.self).filter("date = '\(arrDate[itemCountWater])'")
+            var countLiter = ""
             if(result.count != 0){
                 for i in 0...result.count - 1{
-                    print(result[i].countWater)
+                    print(result[i].countWater, "В Цикле '\(itemCountWater)'")
                     countWater = countWater + Double(Int(result[i].countWater!)!)
-                    arrCountWater.append(String(countWater))
                     print(countWater, "ДАННЫЕ ")
+                    countLiter = String(countWater / 1000.0)
+                    print(countLiter, " В ЛИТРАХ ")
+                }
+                arrCountWater.append(String(countWater))
+                arrLiterWater.append(countLiter)
+            } else {
+                arrCountWater.append(String("0"))
+                arrLiterWater.append(String("0"))
+                print("Добавил пустое заначения")
+            }
+        }
+        
+        var weightWater = loadData() ?? "0"
+        var arrWeightWater : [Double] = []
+
+        for barValueCount in 0...7{
+            var finalCountWeight = 0.0
+            var someCounter = Double(arrCountWater[barValueCount])
+            if(someCounter! > Double(weightWater)!){
+                finalCountWeight = 10.0
+                arrWeightWater.append(finalCountWeight)
+            } else {
+                if(someCounter == 0){
+                    arrWeightWater.append(0.0)
+                } else {
+                finalCountWeight = (someCounter! / Double(weightWater)!) * 10.0
+                arrWeightWater.append(finalCountWeight)
+                print(finalCountWeight, "финальное число")
                 }
             }
         }
         
-        var weightWater = loadData()
-        var arrWeightWater : [Double] = []
-
-        for barValueCount in 0...6{
-            var finalCountWeight = 0.0
-            var someCounter = Double(arrCountWater[barValueCount])
-            if(someCounter! > Double(weightWater!)!){
-                finalCountWeight = 10.0
-                arrWeightWater.append(finalCountWeight)
-            } else {
-                finalCountWeight = (someCounter! / Double(weightWater!)!) * 10.0
-                arrWeightWater.append(finalCountWeight)
-                print(finalCountWeight, "финальное число")
-            }
-        }
+        
         
         
         // Do any additional setup after loading the view, typically from a nib.
         
         var data: [BarData] = []
         
-        data.append(BarData.init(barTitle: arrDate[0], barValue: Float(arrWeightWater[0]), pinText: "1.4 €"))
-        data.append(BarData.init(barTitle: arrDate[1], barValue: 10, pinText: "10 €"))
-        data.append(BarData.init(barTitle: "Mar", barValue: 3.1, pinText: "3.1 €"))
-        data.append(BarData.init(barTitle: "Apr", barValue: 4.8, pinText: "4.8 €"))
-        data.append(BarData.init(barTitle: "May", barValue: 6.6, pinText: "6.6 €"))
-        data.append(BarData.init(barTitle: "Jun", barValue: 7.4, pinText: "7.4 €"))
-        data.append(BarData.init(barTitle: "Jul", barValue: 5.5, pinText: "5.5 €"))
+        data.append(BarData.init(barTitle: arrDate[0], barValue: Float(arrWeightWater[0]), pinText: String(arrLiterWater[0])))
+        data.append(BarData.init(barTitle: arrDate[1], barValue: Float(arrWeightWater[1]), pinText: String(arrLiterWater[1])))
+        data.append(BarData.init(barTitle: "Mar", barValue: Float(arrWeightWater[2]), pinText: String(arrLiterWater[2])))
+        data.append(BarData.init(barTitle: "Apr", barValue: Float(arrWeightWater[3]), pinText: String(arrLiterWater[3])))
+        data.append(BarData.init(barTitle: "May", barValue: Float(arrWeightWater[4]), pinText: String(arrLiterWater[4])))
+        data.append(BarData.init(barTitle: "Jun", barValue: Float(arrWeightWater[5]), pinText: String(arrLiterWater[5])))
+        data.append(BarData.init(barTitle: "Jul", barValue: Float(arrWeightWater[6]), pinText: String(arrLiterWater[6])))
         
         chart.data = data
         chart.barsCanBeClick = true
         chart.maxValue = 10.0
         chart.emptyColor = UIColor.clear
         chart.barWidth = 7
-        chart.progressColor = UIColor.red
+        chart.progressColor = UIColor(hexString: "#492fef")
+        chart.progressClickColor = UIColor(hexString: "#f2912c")
+        chart.pinBackgroundColor = UIColor(hexString: "#e2335e")
+        chart.pinTxtColor = UIColor(hexString: "#ffffff")
+        chart.barTitleColor = UIColor(hexString: "#b6bdd5")
+        chart.barTitleSelectedColor = UIColor(hexString: "#ffffff")
 //        chart.progressColor = UIColor.init(hexString: "99ffffff")
 //        chart.progressClickColor = UIColor.init(hexString: "F2912C")
 //        chart.pinBackgroundColor = UIColor.init(hexString: "E2335E")
@@ -141,5 +193,63 @@ class StatisticsViewController: UIViewController, ChartProgressBarDelegate {
         let mainNumber = UserDefaults.standard.string(forKey: "weight")
         return mainNumber
     }
+    
+
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 7
+    }
+    
+    // create a cell for each table view row
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        // create a new cell if needed or reuse an old one
+        let cell:UITableViewCell = self.tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier) as UITableViewCell!
+        
+        // set the text from the data model
+        let monster = arrCountWater[indexPath.row]
+        cell.textLabel?.text = arrDate[indexPath.row]
+        cell.detailTextLabel?.text = animals[indexPath.row]
+        let label = UILabel.init(frame: CGRect(x:0,y:0,width:60,height:20))
+        label.text = arrLiterWater[indexPath.row]
+        label.textColor = UIColor.gray
+        cell.accessoryView = label
+
+        
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("You tapped cell number \(indexPath.row).")
+    
+    }
+
+
+
+    
+    
+    
 }
+
+// Расширение для hex цветов
+extension UIColor {
+    convenience init(hexString: String) {
+        let hex = hexString.trimmingCharacters(in: CharacterSet.alphanumerics.inverted)
+        var int = UInt32()
+        Scanner(string: hex).scanHexInt32(&int)
+        let a, r, g, b: UInt32
+        switch hex.count {
+        case 3: // RGB (12-bit)
+            (a, r, g, b) = (255, (int >> 8) * 17, (int >> 4 & 0xF) * 17, (int & 0xF) * 17)
+        case 6: // RGB (24-bit)
+            (a, r, g, b) = (255, int >> 16, int >> 8 & 0xFF, int & 0xFF)
+        case 8: // ARGB (32-bit)
+            (a, r, g, b) = (int >> 24, int >> 16 & 0xFF, int >> 8 & 0xFF, int & 0xFF)
+        default:
+            (a, r, g, b) = (255, 0, 0, 0)
+        }
+        self.init(red: CGFloat(r) / 255, green: CGFloat(g) / 255, blue: CGFloat(b) / 255, alpha: CGFloat(a) / 255)
+    }
+}
+
 

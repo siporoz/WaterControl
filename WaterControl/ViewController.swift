@@ -67,13 +67,15 @@ class ViewController: UIViewController{
     
     func upDate(){
         let count2 = Int(progressWater.text!) // Выпито
-        let count = Int(weight.text!) // заданно
+        let count = Int(weight.text ?? "0") // заданно
         
-        
+        if(count != 0){
         let percent = count! / 100
-        let final = Double(count2!) / Double(percent)
+        var final = Double(count2!) / Double(percent)
         some.value = CGFloat(final)
-
+        } else{
+            some.value = CGFloat(0)
+        }
     }
     
     @objc private func dismissKeyboard() {
@@ -126,11 +128,14 @@ class ViewController: UIViewController{
         // Application is back in the foreground
         let mainDate = getDate()
         let loadDate = loadData()
-        print(mainDate," СЕГОДНЯШНЯЯ ДАТА ")
-        print(loadDate!," ПОДГРУЖЕННАЯ ДАТА ")
         
-        if(mainDate != loadDate!){
-            self.viewDidLoad()
+        if (loadData() != nil){
+//        print(mainDate," СЕГОДНЯШНЯЯ ДАТА ")
+//        print(loadDate!," ПОДГРУЖЕННАЯ ДАТА ")
+        
+            if(mainDate != loadDate!){
+                self.viewDidLoad()
+            }
         }
     }
     
